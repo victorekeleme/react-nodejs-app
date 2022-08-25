@@ -7,9 +7,7 @@ library identifier:'jenkins-shared-library@jenkins-npm', retriever: modernSCM(
 
 pipeline {
     agent any
-    tools {
-
-    }
+    
     environment {
         IMAGE_NAME = 'vistein12/react-nodejs-app:1.1'
     }
