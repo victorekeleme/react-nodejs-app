@@ -2,8 +2,8 @@
 
 library identifier:'jenkins-shared-library@jenkins-npm', retriever: modernSCM(
     [$class: 'GitSCMSource',
-    remote: 'git@github.com:victorekeleme/jenkins-shared-library.git',
-    credentialsId: 'git-ssh-credentials'
+    remote: 'https://github.com/victorekeleme/jenkins-shared-library.git',
+    credentialsId: 'git-credentials'
     ])
 
 pipeline {
