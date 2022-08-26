@@ -1,3 +1,4 @@
+#!usr/bin/env groovy
 
 library identifier:'jenkins-shared-library@jenkins-npm', retriever: modernSCM(
     [$class: 'GitSCMSource',
@@ -7,7 +8,7 @@ library identifier:'jenkins-shared-library@jenkins-npm', retriever: modernSCM(
 
 pipeline {
     agent any
-    
+
     environment {
         IMAGE_NAME = 'vistein12/react-nodejs-app:1.1'
     }
