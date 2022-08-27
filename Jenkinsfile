@@ -33,6 +33,7 @@ pipeline {
                     echo "Deploying to AWS EC2 Instance"
                     sshagent(['ec2-credentials']) {
                         sh "scp docker-compose.yaml ec2-user@18.117.146.90:/home/ec2-user"
+                        sh "scp shellScript.sh ec2-user@18.117.146.90:/home/ec2-user"
                         sh "ssh -o StrictHostKeyChecking=no ec2-user@18.117.146.90 ${shellCmd}"
                         
                     }
