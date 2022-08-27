@@ -29,7 +29,7 @@ pipeline {
                 script {
                     // def dockerCmd = "docker run -d -p 3000:3080 ${env.IMAGE_NAME}"
                     // echo "Deploying to AWS EC2 Instance"
-                    sshagent() {
+                    sshagent(['ec2-credentials']) {
                         sh "ssh -v -o StrictHostKeyChecking=no ec2-user@18.117.146.90"
                         
                     }
