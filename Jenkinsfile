@@ -12,7 +12,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'vistein12/react-nodejs-app:1.1'
     }
-    stages{
+    // stages{
         // stage("Build Image") {
         //     steps {
         //         script {
@@ -37,5 +37,5 @@ pipeline {
         //     }
         // }
 
-    }
+    // }
 }
