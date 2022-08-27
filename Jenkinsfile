@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     // def dockerCmd = "docker run -d -p 3000:3080 ${env.IMAGE_NAME}"
-                    def dockerComposeCmd = "docker-compose -f docker-compose.yaml up --detach"
+                    def dockerComposeCmd = "bash docker-compose -f docker-compose.yaml up --detach"
                     echo "Deploying to AWS EC2 Instance"
                     sshagent(['ec2-credentials']) {
                         sh "scp docker-compose.yaml ec2-user@18.117.146.90:/home/ec2-user"
