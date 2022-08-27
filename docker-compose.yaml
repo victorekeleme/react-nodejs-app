@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+    react-nodjs-app:
+      image: vistein12/react-nodejs-app:1.1
+      ports:
+        - 3000:3080
+        
